@@ -24,6 +24,7 @@ API build for the Coronalytics iOS app for #CodeVsCovid19 hackathon.
 
 ### Contact check
   - POST, api/v1/contacts/check_contact
+
   payload:
 ```json
   { "phone" : "123123123" }
@@ -42,15 +43,16 @@ status:
 
 ### Submit new infection case
   - POST, api/v1/contacts/newInfection
+
   payload:
 ```json
 {
-	"infectedPhone" : "(555) 564-8583",
-	"friendsPhones" : [
-    "555-522-8243",
-    "555-522-8242",
-    "555-522-8241",
-    "555-522-8240"
-  ]
+"infectedPhone" : "(555) 564-8583",
+"friendsPhones" : [
+"555-522-8243",
+"555-522-8242",
+"555-522-8241",
+"555-522-8240"
+]
 }
 ```
