@@ -1,21 +1,56 @@
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/1342803/36623515-7293b4ec-18d3-11e8-85ab-4e2f8fb38fbd.png" width="320" alt="API Template">
-    <br>
-    <br>
-    <a href="http://docs.vapor.codes/3.0/">
-        <img src="http://img.shields.io/badge/read_the-docs-2196f3.svg" alt="Documentation">
-    </a>
-    <a href="https://discord.gg/vapor">
-        <img src="https://img.shields.io/discord/431917998102675485.svg" alt="Team Chat">
-    </a>
-    <a href="LICENSE">
-        <img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT License">
-    </a>
-    <a href="https://circleci.com/gh/vapor/api-template">
-        <img src="https://circleci.com/gh/vapor/api-template.svg?style=shield" alt="Continuous Integration">
-    </a>
-    <a href="https://swift.org">
-        <img src="http://img.shields.io/badge/swift-5.1-brightgreen.svg" alt="Swift 5.1">
-    </a>
-</p>
 # CoronalyticsAPI
+
+API build for the Coronalytics iOS app for #CodeVsCovid19 hackathon.
+
+## Functionality
+
+### Daily analytics data
+ - GET, api/v1/daily_analytics
+
+ returns:
+```json
+ [
+   {
+      "confirmed": 59989,
+      "region": "Mainland China",
+      "state": "Hubei",
+      "recovered": 7862,
+      "deaths": 1789,
+      "id": 1,
+      "lastUpdate": "2020-02-17T23:13:06"
+  }
+]
+```
+
+### Contact check
+  - POST, api/v1/contacts/check_contact
+  payload:
+```json
+  { "phone" : "123123123" }
+```
+  response:
+```json
+{
+  "status": 0,
+  "phone": "123123123"
+}
+```
+status:
+  - clear = 0
+  - infected = 1
+  - friendsInfected = 2
+
+### Submit new infection case
+  - POST, api/v1/contacts/newInfection
+  payload:
+```json
+{
+	"infectedPhone" : "(555) 564-8583",
+	"friendsPhones" : [
+    "555-522-8243",
+    "555-522-8242",
+    "555-522-8241",
+    "555-522-8240"
+  ]
+}
+```
