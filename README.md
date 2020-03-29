@@ -47,7 +47,7 @@ status:
   payload:
 ```json
 {
-"infectedPhone" : "(555) 564-8583",
+"infectedPhone" : "555-564-8583",
 "friendsPhones" : [
 "555-522-8243",
 "555-522-8242",
