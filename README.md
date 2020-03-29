@@ -1,6 +1,6 @@
 # CoronalyticsAPI
 
-API build for the Coronalytics iOS app for #CodeVsCovid19 hackathon.
+API build for the [Coronalytics iOS](https://github.com/CyrilCermak/Coronalytics) app for #CodeVsCovid19 hackathon.
 
 ## Functionality
 
